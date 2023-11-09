@@ -10,13 +10,15 @@ public class EntryPoint : MonoBehaviour
 
     [SerializeField] private JoystickMovement _joystickMovement;
     [SerializeField] private PlayerMovement _playerMovement;
+    [SerializeField] private EnemyAttack _enemyAttack;
     private void Start()
     {
         _joystickMovement.Initialize();
         _playerMovement.Initialize();
 
 
-        _walkingEnemy.Initialize(2, 0, 0, _player.transform);
+        _walkingEnemy.Initialize(2, 0, 0, _player.transform, _player);
+        _enemyAttack.Initialize(_player.transform);
     }
 
 }

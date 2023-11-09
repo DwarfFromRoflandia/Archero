@@ -66,6 +66,10 @@
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Joystick.cs" />
     <Compile Include="Assets\Scripts\WalkingEnemy.cs" />
+    <Compile Include="Assets\Scripts\MovementForRangedCombat.cs" />
+    <Compile Include="Assets\Scripts\MovementForMeleeCombat.cs" />
+    <Compile Include="Assets\Scripts\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

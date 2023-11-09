@@ -9,18 +9,24 @@ public class WalkingEnemy : Enemy
 {
     [SerializeField] private LayerMask _layerMask;
     private NavMeshAgent _navMeshAgent;
-    private Transform _player;
+    private Transform _playerPosition;
     private float _attackRange;
-
-    public void Initialize(float speed, int damage, int health, Transform player)
+    private IMoveble _moveble;
+    private Player _player;
+    public void Initialize(float speed, int damage, int health, Transform playerPosition, Player player)
     {
         _speed = speed;
         _damage = damage;
         _health = health;
+        _enemyAttack = GetComponent<EnemyAttack>();
+
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        _playerPosition = playerPosition;
         _player = player;
 
         _attackRange = 1;
+        _moveble = new MovementForRangedCombat(_navMeshAgent, _playerPosition);
+
     }
 
     private void Update()
@@ -28,13 +34,13 @@ public class WalkingEnemy : Enemy
         
         if (IsVisibility())
         {
-            //attack is called here
+            Attack(_player);
             Debug.Log("Attacked");
             _navMeshAgent.isStopped = true;
         }
         else
         {
-            Move();
+            _moveble.Move();
         }
     }
 
@@ -43,10 +49,4 @@ public class WalkingEnemy : Enemy
         RaycastHit hit;
         return Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, _layerMask);
     }
-
-    public override void Move()
-    {
-        _navMeshAgent.isStopped = false;
-        _navMeshAgent.SetDestination(_player.position);
-    }   
 }

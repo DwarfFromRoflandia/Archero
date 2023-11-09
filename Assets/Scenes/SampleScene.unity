@@ -919,6 +919,7 @@ MonoBehaviour:
   _walkingEnemy: {fileID: 1962202862}
   _joystickMovement: {fileID: 8170153793055161480}
   _playerMovement: {fileID: 1148118303}
+  _enemyAttack: {fileID: 1962202863}
 --- !u!1 &1814400934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,6 +1032,7 @@ GameObject:
   - component: {fileID: 1962202856}
   - component: {fileID: 1962202861}
   - component: {fileID: 1962202862}
+  - component: {fileID: 1962202863}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1167,9 +1169,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e4ff8bfe170f843a355ea07c509f67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rateOfFire: 0.5
   _layerMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &1962202863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962202854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6cd11be8e1f43449a87d8fe20d32d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabProjectile: {fileID: 3121339726174121442, guid: a0fe2308a4e38b248a7ff01b9277c5ac, type: 3}
+  _cloneProjectile: {fileID: 0}
 --- !u!1 &1981648641
 GameObject:
   m_ObjectHideFlags: 0
