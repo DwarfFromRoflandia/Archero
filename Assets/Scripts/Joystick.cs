@@ -10,6 +10,7 @@ public abstract class Joystick : MonoBehaviour, IDragHandler, IPointerUpHandler,
     [SerializeField] private Image _backgroundField;
     [SerializeField] private Image _handle;
 
+
     private Vector2 _joystickStartPosition;
 
     protected Vector2 _inputVector;

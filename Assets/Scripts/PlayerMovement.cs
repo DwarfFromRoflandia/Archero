@@ -6,13 +6,13 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotateSpeed;
-
     private Rigidbody _rigidbody;
 
     public void Initialize()
     {
         _rigidbody = GetComponent<Rigidbody>();
     }
+
 
     public void MovePlayer(Vector3 moveDirection)
     {
