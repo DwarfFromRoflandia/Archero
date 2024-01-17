@@ -62,8 +62,10 @@
     <Compile Include="Assets\Scripts\EntryPoint.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Interface\IMoveble.cs" />
+    <Compile Include="Assets\Scripts\Player\KeyboardController.cs" />
     <Compile Include="Assets\Scripts\Enemy\Movement\MovementForMeleeCombat.cs" />
     <Compile Include="Assets\Scripts\Player\Joystick\JoystickMovement.cs" />
+    <Compile Include="Assets\Scripts\LocalInstaller.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />

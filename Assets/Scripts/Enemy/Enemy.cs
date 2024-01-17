@@ -9,7 +9,7 @@ public abstract class Enemy : MonoBehaviour
     protected int _damage;
     protected int _health;
 
-    [SerializeField] float _rateOfFire;
+    [SerializeField] private float _rateOfFire;
     public float RateOfFire { get => _rateOfFire; }
     protected EnemyAttack _enemyAttack;
 

@@ -6,25 +6,26 @@ using UnityEngine.UI;
 
 public class JoystickMovement : Joystick, IController
 {
-    [SerializeField] private PlayerMovement _playerMovement;
+    private PlayerMovement _playerMovement;
 
-    private void Update()
+    public void Controller()
     {
-        Controller();
-        Debug.Log(Controller());
+
     }
 
-    public bool Controller()
-    {
-        if (_inputVector.x != 0 || _inputVector.y != 0)
-        {
-            _playerMovement.MovePlayer(new Vector3(_inputVector.x, 0, _inputVector.y));
-            _playerMovement.RoatatePlayer(new Vector3(_inputVector.x, 0, _inputVector.y));
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+
+    //public void Controller()
+    //{
+    //    if (_inputVector.x != 0 || _inputVector.y != 0)
+    //    {
+    //        _playerMovement.MovePlayer(new Vector3(_inputVector.x, 0, _inputVector.y));
+    //        _playerMovement.RoatatePlayer(new Vector3(_inputVector.x, 0, _inputVector.y));
+    //        //return true;
+    //    }
+    //    else
+    //    {
+    //        //return false;
+
+    //    }
+    //}
 }

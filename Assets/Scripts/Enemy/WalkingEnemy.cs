@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
 using UnityEngine.AI;
+using Zenject;
 
 
 public class WalkingEnemy : Enemy
@@ -13,21 +14,26 @@ public class WalkingEnemy : Enemy
     private float _attackRange;
     private IMoveble _moveble;
     private Player _player;
-    public void Initialize(float speed, int damage, int health, Transform playerPosition, Player player)
+
+
+    public void Initialize(Player player)
     {
-        _speed = speed;
-        _damage = damage;
-        _health = health;
-        _enemyAttack = GetComponent<EnemyAttack>();
-
-        _navMeshAgent = GetComponent<NavMeshAgent>();
-        _playerPosition = playerPosition;
-        _player = player;
-
+        _speed = 2f;
+        _damage = 0;
+        _health = 0;
         _attackRange = 1;
-        _moveble = new MovementForRangedCombat(_navMeshAgent, _playerPosition);
+        
+        _enemyAttack = GetComponent<EnemyAttack>();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
 
+        _player = player;
+        _playerPosition = player.transform;
+
+        _moveble = new MovementForRangedCombat(_navMeshAgent, _playerPosition);
+        //_moveble = moveble;
+        Debug.Log(_moveble.GetType());
     }
+
 
     private void Update()
     { 

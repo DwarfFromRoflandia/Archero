@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
+
 
 public class EnemyAttack : MonoBehaviour
 {
@@ -10,11 +12,15 @@ public class EnemyAttack : MonoBehaviour
     private float _timeToReload;
     private Transform _transformPlayer;
 
-    public void Initialize(Transform transformPlayer)
+    [Inject]
+    public void Construct(Player player)
     {
-        _transformPlayer = transformPlayer;
+        _transformPlayer = player.transform;
+    }
+
+    public void Initialize()
+    {
         _enemy = GetComponent<Enemy>();
-        
     }
 
     public void Attack()
