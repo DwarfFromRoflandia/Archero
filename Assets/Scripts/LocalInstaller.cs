@@ -5,38 +5,60 @@ using Zenject;
 
 public class LocalInstaller : MonoInstaller
 {
-    [SerializeField] private Player _player;
-    [SerializeField] private EnemyAttack _enemyAttack;
-    [SerializeField] private Projectile _projectilePrefab;
+    [SerializeField] private GameObject _playerPrefab;
+    [SerializeField] private Player _playerClone;
+    [SerializeField] private Transform _spawnPoint;
+    [SerializeField] private PlayerMovement _playerMovement;
+    [SerializeField] private EntryPoint _entryPoint;
+
 
     /*It sounds like you need to sort out the 'Unable to resolve type' errors. 
      * That means that injection is happening but zenject can't find bindings for all the [Inject] data in the MonoBehaviours
      */
     public override void InstallBindings()
     {
+
         BindPlayer();
-        BindProjectile();
-        BindEnemyAttck();
+        BindPlayerMovement();
+        BindKeyboardController();
+        BindEntryPoint();
     }
     
-    private void BindEnemyAttck()
-    {
-        Container
-            .Bind()
-            .FromInstance(_enemyAttack)
-            .AsSingle();
-    }
 
     private void BindPlayer()
     {
-        Container
-            .Bind()
-            .FromInstance(_player)
+        _playerClone = Container.InstantiatePrefabForComponent<Player>(_playerPrefab, _spawnPoint.position, Quaternion.identity, null);
+
+        Container.Bind<Player>()
+            .FromInstance(_playerClone)
             .AsSingle();
     }
 
-    private void BindProjectile()
+    private void BindKeyboardController()
     {
+        Container
+            .Bind<IController>() 
+            .To<KeyboardController>() 
+            .AsSingle()
+            .NonLazy();
+    }
 
+    private void BindPlayerMovement()
+    {
+        PlayerMovement playerMovement = _playerClone.GetComponent<PlayerMovement>();
+
+        Container
+            .Bind<PlayerMovement>()
+            .FromInstance(playerMovement)
+            .AsSingle()
+            .NonLazy();
+    }
+
+    private void BindEntryPoint()
+    {
+        Container
+            .Bind<EntryPoint>()
+            .FromInstance(_entryPoint)
+            .AsSingle();
     }
 }

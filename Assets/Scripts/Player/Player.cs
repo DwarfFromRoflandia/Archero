@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 
 public class Player : MonoBehaviour
@@ -15,18 +16,18 @@ public class Player : MonoBehaviour
     public void Initialize(IController controller)
     {
         _controller = controller;
+        Debug.Log(_controller.GetType());
     }
 
-
-    private void Update()
+    private void FixedUpdate()
     {
         Move();
     }
 
-    public void Attack(Enemy enemy)
-    {
-        enemy.TakeDamage(_damage);
-    }
+    //public void Attack(Enemy enemy)
+    //{
+    //    enemy.TakeDamage(_damage);
+    //}
 
     public void TakeDamage(int damage)
     {
@@ -36,10 +37,5 @@ public class Player : MonoBehaviour
     private void Move()
     {
         _controller.Controller();
-    }
-
-    internal void Initialize(object v)
-    {
-        throw new NotImplementedException();
     }
 }

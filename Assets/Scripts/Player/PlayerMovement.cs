@@ -8,8 +8,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotateSpeed;
     [SerializeField] private Rigidbody _rigidbody;
-
-
     public void MovePlayer(Vector3 moveDirection)
     {
         Vector3 offset = moveDirection * _moveSpeed * Time.deltaTime;
