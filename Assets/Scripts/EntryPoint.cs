@@ -6,10 +6,10 @@ using Zenject;
 
 public class EntryPoint : MonoBehaviour
 {
-
-    [SerializeField] private Player _player;
-    [SerializeField] private PlayerMovement _playerMovement;
-
+    [SerializeField] private JoystickController _joystickController;
+    private Player _player;
+    private PlayerMovement _playerMovement;
+    
     [Inject]
     public void Construct(Player player, PlayerMovement playerMovement)
     {
@@ -19,7 +19,19 @@ public class EntryPoint : MonoBehaviour
 
     private void Start()
     {
-        _player.Initialize(new KeyboardController(_playerMovement));
+        SetController();
     }
 
+    private void SetController()
+    {
+        if (SystemInfo.deviceType == DeviceType.Handheld)
+        {
+            _joystickController.Initialize();
+            _player.Initialize(_joystickController);
+        }
+        else
+        {
+            _player.Initialize(new KeyboardController(_playerMovement));
+        }
+    }
 }

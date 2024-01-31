@@ -761,6 +761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerPrefab: {fileID: 688058390767240546, guid: 327be38f581c73e4c88413e5816e7ee4, type: 3}
+  _playerClone: {fileID: 0}
   _spawnPoint: {fileID: 1567530708}
   _playerMovement: {fileID: 6860685233255665722, guid: 327be38f581c73e4c88413e5816e7ee4, type: 3}
   _entryPoint: {fileID: 1671954564}
@@ -870,8 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4072e2bcae2175842ab9a7a3ebe4c241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
-  _playerMovement: {fileID: 0}
+  _joystickController: {fileID: 8170153793055161480}
 --- !u!1 &1981648641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1280,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &8170153792761430784
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1355,7 +1355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &8170153793055161476
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1425,10 +1425,26 @@ GameObject:
   - component: {fileID: 8170153793055161478}
   - component: {fileID: 8170153793055161476}
   - component: {fileID: 8170153793055161477}
+  - component: {fileID: 8170153793055161480}
   m_Layer: 5
   m_Name: Joystick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
+--- !u!114 &8170153793055161480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8170153793055161479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfe3ff1f44fef7418de994668d38df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _joystick: {fileID: 8170153793055161477}
+  _backgroundField: {fileID: 8170153792035633430}
+  _handle: {fileID: 8170153792761430785}

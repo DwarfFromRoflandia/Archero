@@ -20,8 +20,6 @@ public class LocalInstaller : MonoInstaller
 
         BindPlayer();
         BindPlayerMovement();
-        BindKeyboardController();
-        BindEntryPoint();
     }
     
 
@@ -34,31 +32,14 @@ public class LocalInstaller : MonoInstaller
             .AsSingle();
     }
 
-    private void BindKeyboardController()
-    {
-        Container
-            .Bind<IController>() 
-            .To<KeyboardController>() 
-            .AsSingle()
-            .NonLazy();
-    }
-
     private void BindPlayerMovement()
     {
-        PlayerMovement playerMovement = _playerClone.GetComponent<PlayerMovement>();
+        _playerMovement = _playerClone.GetComponent<PlayerMovement>();
 
         Container
             .Bind<PlayerMovement>()
-            .FromInstance(playerMovement)
+            .FromInstance(_playerMovement)
             .AsSingle()
             .NonLazy();
-    }
-
-    private void BindEntryPoint()
-    {
-        Container
-            .Bind<EntryPoint>()
-            .FromInstance(_entryPoint)
-            .AsSingle();
     }
 }
