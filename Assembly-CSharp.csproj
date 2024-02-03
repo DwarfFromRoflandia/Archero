@@ -59,12 +59,14 @@
     <Compile Include="Assets\Scripts\Interface\IController.cs" />
     <Compile Include="Assets\Scripts\EntryPoint.cs" />
     <Compile Include="Assets\Scripts\Player\KeyboardController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Player\Joystick\JoystickMovement.cs" />
     <Compile Include="Assets\Scripts\LocalInstaller.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player\Joystick\JoystickController.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Player\Joystick\Joystick.cs" />
-    <Compile Include="Assets\Scripts\Player\Joystick\JoystickController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\GroundEnemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

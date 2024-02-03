@@ -11,7 +11,7 @@ public class EntryPoint : MonoBehaviour
     private PlayerMovement _playerMovement;
     
     [Inject]
-    public void Construct(Player player, PlayerMovement playerMovement)
+    private void Construct(Player player, PlayerMovement playerMovement)
     {
         _player = player;
         _playerMovement = playerMovement;

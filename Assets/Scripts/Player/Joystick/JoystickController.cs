@@ -8,7 +8,7 @@ public class JoystickController : Joystick, IController
     private PlayerMovement _playerMovement;
 
     [Inject]
-    public void Construct(PlayerMovement playerMovement)
+    private void Construct(PlayerMovement playerMovement)
     {
         _playerMovement = playerMovement;
     }

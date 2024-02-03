@@ -17,7 +17,6 @@ public class LocalInstaller : MonoInstaller
      */
     public override void InstallBindings()
     {
-
         BindPlayer();
         BindPlayerMovement();
     }
