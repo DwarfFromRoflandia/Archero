@@ -1,12 +1,12 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(GroundEnemy))]
+[CustomEditor(typeof(EnemyVision))]
 public class FieldOfVisionEditor : Editor
 {
     private void OnSceneGUI(SceneView sceneView)
     {
-        GroundEnemy fieldOfVision = (GroundEnemy)target;
+        EnemyVision fieldOfVision = (EnemyVision)target;
         Handles.color = Color.white;
 
         Handles.DrawWireArc(fieldOfVision.transform.position, Vector3.up, Vector3.forward, 360, fieldOfVision.VisibilityRadius);

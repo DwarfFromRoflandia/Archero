@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2651475840460572574}
   - component: {fileID: 2651475840460572641}
   - component: {fileID: 2651475840460572573}
+  - component: {fileID: 1197623318}
   - component: {fileID: 676971365201566952}
   m_Layer: 0
   m_Name: GroundEnemy
@@ -113,17 +114,28 @@ MonoBehaviour:
   _speed: 0
   _healthPoint: 0
   _attackSpeed: 0
-  _visibilityRadius: 6
-  _attackRadius: 3
-  _angle: 360
-  _player: {fileID: 0}
+--- !u!114 &1197623318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2651475840460572640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f5e981e61a9fd499203e503bf9ec2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   _targetMask:
     serializedVersion: 2
     m_Bits: 8
   _obstructionMask:
     serializedVersion: 2
     m_Bits: 64
-  _isSeeTarget: 0
+  _visibilityRadius: 7
+  _attackRadius: 4
+  _angle: 360
+  _player: {fileID: 0}
 --- !u!195 &676971365201566952
 NavMeshAgent:
   m_ObjectHideFlags: 0

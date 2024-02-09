@@ -8,12 +8,14 @@ using Zenject;
 public class GroundEnemy : Enemy
 {
     private NavMeshAgent _navMeshAgent;
+    private EnemyVision _enemyVision;
 
     [Inject]
-    private void Construct(Player player, IMovable movable)
+    private void Construct(IMovable movable)
     {
-        _player = player;
-        StartCoroutine(Coroutine());
+
+        _enemyVision = GetComponent<EnemyVision>();
+        StartCoroutine(_enemyVision.Coroutine());
 
         _movable = movable;
         Debug.Log(_movable.GetType());
@@ -23,11 +25,10 @@ public class GroundEnemy : Enemy
 
     private void Update()
     {
-        if (_isSeeTarget)
+        if (_enemyVision.IsSeeTarget)
         {
             _movable.Move(_navMeshAgent);
         }
 
     }
-
 }

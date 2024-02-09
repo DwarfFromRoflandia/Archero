@@ -727,6 +727,7 @@ MonoBehaviour:
   _spawnPoint: {fileID: 1567530708}
   _playerMovement: {fileID: 6860685233255665722, guid: 327be38f581c73e4c88413e5816e7ee4, type: 3}
   _entryPoint: {fileID: 1671954564}
+  _enemtVision: {fileID: 0}
 --- !u!1 &1567530707
 GameObject:
   m_ObjectHideFlags: 0

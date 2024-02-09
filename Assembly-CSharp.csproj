@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Player\Joystick\Joystick.cs" />
     <Compile Include="Assets\Scripts\Interface\IMovable.cs" />
     <Compile Include="Assets\Scripts\Enemy\GroundEnemy.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyVision.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

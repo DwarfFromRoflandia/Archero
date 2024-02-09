@@ -10,6 +10,7 @@ public class LocalInstaller : MonoInstaller
     [SerializeField] private Transform _spawnPoint;
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private EntryPoint _entryPoint;
+    [SerializeField] private EnemyVision _enemtVision;
 
 
     /*It sounds like you need to sort out the 'Unable to resolve type' errors. 
