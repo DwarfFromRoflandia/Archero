@@ -11,6 +11,9 @@ public class FieldOfVisionEditor : Editor
 
         Handles.DrawWireArc(fieldOfVision.transform.position, Vector3.up, Vector3.forward, 360, fieldOfVision.VisibilityRadius);
 
+        Handles.color = Color.red;
+        Handles.DrawWireArc(fieldOfVision.transform.position, Vector3.up, Vector3.forward, 360, fieldOfVision.AttackRadius);
+
         Vector3 firstViewAngle = DirectionFromAngle(fieldOfVision.transform.eulerAngles.y, -fieldOfVision.Angle / 2);
         Vector3 secondViewAngle = DirectionFromAngle(fieldOfVision.transform.eulerAngles.y, fieldOfVision.Angle / 2);
 

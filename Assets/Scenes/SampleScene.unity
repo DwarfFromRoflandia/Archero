@@ -557,26 +557,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2651475840460572573, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
-      propertyPath: _angle
-      value: 360
-      objectReference: {fileID: 0}
-    - target: {fileID: 2651475840460572573, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
-      propertyPath: _player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2651475840460572573, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
-      propertyPath: TestPlayer
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2651475840460572573, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
-      propertyPath: testPlayer
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2651475840460572573, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
-      propertyPath: _isSeeTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2651475840460572640, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
       propertyPath: m_Name
       value: GroundEnemy

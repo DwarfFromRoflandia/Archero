@@ -7,19 +7,25 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _healthPoint;
     [SerializeField] private float _attackSpeed;
+
     [SerializeField] private float _visibilityRadius;
+    [SerializeField] private float _attackRadius;
+
     [Range(0, 360)]
     [SerializeField] private float _angle;
+
     [SerializeField] protected Player _player;
     [SerializeField] private LayerMask _targetMask;
     [SerializeField] private LayerMask _obstructionMask;
     [SerializeField] protected bool _isSeeTarget;
 
     public float VisibilityRadius { get => _visibilityRadius; }
+    public float AttackRadius { get => _attackRadius; }
     public float Angle { get => _angle; }
     public Player Player { get => _player; }
     public bool IsSeeTarget { get => _isSeeTarget;}
 
+    protected IMovable _movable;
 
     protected IEnumerator Coroutine()
     {

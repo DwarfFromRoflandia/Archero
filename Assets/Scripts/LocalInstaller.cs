@@ -19,6 +19,7 @@ public class LocalInstaller : MonoInstaller
     {
         BindPlayer();
         BindPlayerMovement();
+        BindGroundEnemyMovement();
     }
     
 
@@ -38,6 +39,15 @@ public class LocalInstaller : MonoInstaller
         Container
             .Bind<PlayerMovement>()
             .FromInstance(_playerMovement)
+            .AsSingle()
+            .NonLazy();
+    }
+
+    private void BindGroundEnemyMovement()
+    {
+        Container
+            .Bind<IMovable>()
+            .To<GroundEnemyMovement>()
             .AsSingle()
             .NonLazy();
     }
