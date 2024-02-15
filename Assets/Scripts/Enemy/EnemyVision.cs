@@ -7,7 +7,9 @@ public class EnemyVision : MonoBehaviour
 {
     [SerializeField] private LayerMask _targetMask;
     [SerializeField] private LayerMask _obstructionMask;
+
     private bool _isSeeTarget;
+    private bool _isAttackTarget;
 
 
     [SerializeField] private float _visibilityRadius;
@@ -19,6 +21,7 @@ public class EnemyVision : MonoBehaviour
     public float VisibilityRadius { get => _visibilityRadius; }
     public float AttackRadius { get => _attackRadius; }
     public bool IsSeeTarget { get => _isSeeTarget; }
+    public bool IsAttackTarget { get => _isAttackTarget;}
 
     public float Angle { get => _angle; }
 
@@ -37,6 +40,7 @@ public class EnemyVision : MonoBehaviour
         {
             yield return new WaitForSeconds(0.2f);
             FieldOfVision();
+            FieldOfAttack();
         }
     }
 
@@ -74,6 +78,34 @@ public class EnemyVision : MonoBehaviour
         else if (_isSeeTarget)
         {
             _isSeeTarget = false;
+        }
+    }
+
+    private void FieldOfAttack()
+    {
+        Collider[] rangeChecks = Physics.OverlapSphere(transform.position, _attackRadius, _targetMask);
+
+        if (rangeChecks.Length != 0)
+        {
+            Transform target = rangeChecks[0].transform;
+
+            Vector3 directionToTarget = (target.position - transform.position).normalized;
+
+            float distanceToTarget = Vector3.Distance(transform.position, target.position);
+
+            if (Physics.Raycast(transform.position, directionToTarget, distanceToTarget, _targetMask))
+            {
+                Debug.Log("I attack target");
+                _isAttackTarget = true;
+            }
+            else
+            {
+                _isAttackTarget = false;
+            }
+        }
+        else if (_isSeeTarget)
+        {
+            _isAttackTarget = false;
         }
     }
 }

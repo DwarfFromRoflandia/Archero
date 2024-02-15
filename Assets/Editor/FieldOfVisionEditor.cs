@@ -20,12 +20,18 @@ public class FieldOfVisionEditor : Editor
         Handles.color = Color.yellow;
         Handles.DrawLine(fieldOfVision.transform.position, fieldOfVision.transform.position + firstViewAngle * fieldOfVision.VisibilityRadius);
         Handles.DrawLine(fieldOfVision.transform.position, fieldOfVision.transform.position + secondViewAngle * fieldOfVision.VisibilityRadius);
-
+       
         if (fieldOfVision.IsSeeTarget)
         {
             Handles.color = Color.green;
             Handles.DrawLine(fieldOfVision.transform.position, fieldOfVision.Player.transform.position);
             Debug.Log(fieldOfVision.Player.transform.position);
+        }
+
+        if (fieldOfVision.IsAttackTarget)
+        {
+            Handles.color = Color.red;
+            Handles.DrawLine(fieldOfVision.transform.position, fieldOfVision.Player.transform.position);
         }
     }
 
