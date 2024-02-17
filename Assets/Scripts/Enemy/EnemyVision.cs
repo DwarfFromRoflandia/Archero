@@ -103,7 +103,7 @@ public class EnemyVision : MonoBehaviour
                 _isAttackTarget = false;
             }
         }
-        else if (_isSeeTarget)
+        else if (_isAttackTarget)
         {
             _isAttackTarget = false;
         }

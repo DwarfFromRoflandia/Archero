@@ -25,7 +25,6 @@ public class FieldOfVisionEditor : Editor
         {
             Handles.color = Color.green;
             Handles.DrawLine(fieldOfVision.transform.position, fieldOfVision.Player.transform.position);
-            Debug.Log(fieldOfVision.Player.transform.position);
         }
 
         if (fieldOfVision.IsAttackTarget)

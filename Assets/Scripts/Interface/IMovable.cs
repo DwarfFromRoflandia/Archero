@@ -5,5 +5,5 @@ using UnityEngine.AI;
 
 public interface IMovable
 {
-    public void Move(NavMeshAgent navMeshAgent);
+    public void Move(NavMeshAgent navMeshAgent, Transform transform);
 }

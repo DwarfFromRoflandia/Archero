@@ -20,6 +20,7 @@ public class LocalInstaller : MonoInstaller
     {
         BindPlayer();
         BindPlayerMovement();
+        BindEnemyVision();
         BindGroundEnemyMovement();
     }
     
@@ -51,5 +52,13 @@ public class LocalInstaller : MonoInstaller
             .To<GroundEnemyMovement>()
             .AsSingle()
             .NonLazy();
+    }
+
+    private void BindEnemyVision()
+    {
+        Container
+            .Bind<EnemyVision>()
+            .FromInstance(_enemtVision)
+            .AsSingle();
     }
 }

@@ -567,7 +567,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2651475840460572573, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
       propertyPath: _speed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2651475840460572640, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
       propertyPath: m_Name
@@ -739,7 +739,18 @@ MonoBehaviour:
   _spawnPoint: {fileID: 1567530708}
   _playerMovement: {fileID: 6860685233255665722, guid: 327be38f581c73e4c88413e5816e7ee4, type: 3}
   _entryPoint: {fileID: 1671954564}
-  _enemtVision: {fileID: 0}
+  _enemtVision: {fileID: 985283387}
+--- !u!114 &985283387 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1197623318, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
+  m_PrefabInstance: {fileID: 905376521}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f5e981e61a9fd499203e503bf9ec2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1567530707
 GameObject:
   m_ObjectHideFlags: 0

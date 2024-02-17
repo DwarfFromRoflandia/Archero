@@ -13,7 +13,6 @@ public class GroundEnemy : Enemy
     [Inject]
     private void Construct(IMovable movable)
     {
-
         _enemyVision = GetComponent<EnemyVision>();
         StartCoroutine(_enemyVision.Coroutine());
 
@@ -21,14 +20,11 @@ public class GroundEnemy : Enemy
         Debug.Log(_movable.GetType());
 
         _navMeshAgent = GetComponent<NavMeshAgent>();
+        _navMeshAgent.speed = _speed;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (_enemyVision.IsSeeTarget)
-        {
-            _movable.Move(_navMeshAgent);
-        }
-
+        _movable.Move(_navMeshAgent, gameObject.transform);
     }
 }

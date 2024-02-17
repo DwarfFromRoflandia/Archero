@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
-    [SerializeField] private float _speed;
-    [SerializeField] private float _healthPoint;
-    [SerializeField] private float _attackSpeed;
+    [SerializeField] protected float _speed;
+    [SerializeField] protected float _healthPoint;
+    [SerializeField] protected float _attackSpeed;
 
     protected IMovable _movable;
 }
