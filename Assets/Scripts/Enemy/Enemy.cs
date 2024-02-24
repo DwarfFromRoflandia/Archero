@@ -9,4 +9,11 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected float _attackSpeed;
 
     protected IMovable _movable;
+
+    protected virtual void TakeDammage()
+    {
+
+    }
+
+    protected virtual void PerformAttack() { }
 }

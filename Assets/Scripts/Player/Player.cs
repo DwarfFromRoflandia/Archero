@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     //    enemy.TakeDamage(_damage);
     //}
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
 
     }

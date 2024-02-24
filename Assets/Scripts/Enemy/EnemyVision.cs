@@ -93,7 +93,7 @@ public class EnemyVision : MonoBehaviour
 
             float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-            if (Physics.Raycast(transform.position, directionToTarget, distanceToTarget, _targetMask))
+            if (Physics.Raycast(transform.position, directionToTarget, distanceToTarget, _targetMask) && _isSeeTarget)
             {
                 Debug.Log("I attack target");
                 _isAttackTarget = true;

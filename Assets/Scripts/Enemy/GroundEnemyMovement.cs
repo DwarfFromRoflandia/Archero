@@ -26,6 +26,7 @@ public class GroundEnemyMovement : IMovable
         else if (_enemyVision.IsSeeTarget && _enemyVision.IsAttackTarget)
         {
             navMeshAgent.isStopped = true;
+            transform.LookAt(_player);
             Debug.Log("I Attack");
         }
     }

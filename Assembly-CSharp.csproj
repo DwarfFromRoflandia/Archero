@@ -67,8 +67,11 @@
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Joystick\JoystickController.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Projectile\CollisionScanProjectile.cs" />
     <Compile Include="Assets\Scripts\Player\Joystick\Joystick.cs" />
+    <Compile Include="Assets\Scripts\Projectile\Projectile.cs" />
     <Compile Include="Assets\Scripts\Interface\IMovable.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemy\GroundEnemy.cs" />
   </ItemGroup>
   <ItemGroup>
