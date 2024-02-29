@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2651475840460572641}
   - component: {fileID: 2651475840460572573}
   - component: {fileID: 1197623318}
-  - component: {fileID: 9085570925514779089}
+  - component: {fileID: 2619882815291771459}
   - component: {fileID: 676971365201566952}
   m_Layer: 0
   m_Name: GroundEnemy
@@ -138,7 +138,7 @@ MonoBehaviour:
   _attackRadius: 4
   _angle: 360
   _player: {fileID: 0}
---- !u!114 &9085570925514779089
+--- !u!114 &2619882815291771459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,13 +147,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2651475840460572640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 072535612fa41e44788a2f1b10a4aeda, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d70c155fe0bae84ba5b8711bf19c0ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectileSpawnPoint: {fileID: 5570356976994502495}
-  _projectilePrefab: {fileID: -8685296648166983990, guid: a0fe2308a4e38b248a7ff01b9277c5ac, type: 3}
-  _forceMode: 1
-  _force: 10
 --- !u!195 &676971365201566952
 NavMeshAgent:
   m_ObjectHideFlags: 0

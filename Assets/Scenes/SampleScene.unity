@@ -413,6 +413,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &692517362 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2619882815291771459, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
+  m_PrefabInstance: {fileID: 905376521}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d70c155fe0bae84ba5b8711bf19c0ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +532,22 @@ PrefabInstance:
       propertyPath: m_AngularSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2619882815291771459, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
+      propertyPath: _force
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619882815291771459, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
+      propertyPath: _forceMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619882815291771459, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
+      propertyPath: _projectilePrefab
+      value: 
+      objectReference: {fileID: -8685296648166983990, guid: a0fe2308a4e38b248a7ff01b9277c5ac, type: 3}
+    - target: {fileID: 2619882815291771459, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
+      propertyPath: _projectileSpawnPoint
+      value: 
+      objectReference: {fileID: 942237670}
     - target: {fileID: 2651475840460572572, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -573,8 +600,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: GroundEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 9085570925514779089, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
+      propertyPath: _attackType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
+--- !u!4 &942237670 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5570356976994502495, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
+  m_PrefabInstance: {fileID: 905376521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,6 +776,7 @@ MonoBehaviour:
   _playerMovement: {fileID: 6860685233255665722, guid: 327be38f581c73e4c88413e5816e7ee4, type: 3}
   _entryPoint: {fileID: 1671954564}
   _enemtVision: {fileID: 985283387}
+  _shootingEnemy: {fileID: 692517362}
 --- !u!114 &985283387 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1197623318, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}

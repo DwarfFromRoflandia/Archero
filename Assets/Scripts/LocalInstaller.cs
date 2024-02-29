@@ -11,6 +11,7 @@ public class LocalInstaller : MonoInstaller
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private EntryPoint _entryPoint;
     [SerializeField] private EnemyVision _enemtVision;
+    [SerializeField] private ShootingEnemy _shootingEnemy;
 
 
     /*It sounds like you need to sort out the 'Unable to resolve type' errors. 
@@ -22,6 +23,7 @@ public class LocalInstaller : MonoInstaller
         BindPlayerMovement();
         BindEnemyVision();
         BindGroundEnemyMovement();
+        BindShootingEnemy();
     }
     
 
@@ -52,6 +54,23 @@ public class LocalInstaller : MonoInstaller
             .To<GroundEnemyMovement>()
             .AsSingle()
             .NonLazy();
+    }
+
+    private void BindShootingEnemy()
+    {
+        Container
+            .Bind<IAttacker>()
+            .To<ShootingEnemy>()
+            .FromInstance(_shootingEnemy)
+            .AsSingle();
+    }
+
+    private void BindDetonatingEnemy()
+    {
+        Container
+            .Bind<IAttacker>()
+            .To<DetonatingEnemy>()
+            .AsSingle();
     }
 
     private void BindEnemyVision()
