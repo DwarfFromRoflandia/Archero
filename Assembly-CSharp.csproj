@@ -60,7 +60,6 @@
     <Compile Include="Assets\Scripts\Enemy\GroundEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyVision.cs" />
     <Compile Include="Assets\Scripts\EntryPoint.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyAttack\AttackType.cs" />
     <Compile Include="Assets\Scripts\Player\KeyboardController.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Player\Joystick\JoystickMovement.cs" />
@@ -77,6 +76,8 @@
     <Compile Include="Assets\Scripts\Interface\IMovable.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack\ShootingEnemy.cs" />
     <Compile Include="Assets\Scripts\Enemy\GroundEnemy.cs" />
+    <Compile Include="Assets\Scripts\Projectile\ProjectileDisposeType.cs" />
+    <Compile Include="Assets\Scripts\Projectile\ProjectileDisposeTimer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
