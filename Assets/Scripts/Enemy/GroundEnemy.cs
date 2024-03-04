@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Zenject;
-using System;
 
 public class GroundEnemy : Enemy
 {
     private NavMeshAgent _navMeshAgent;
     private EnemyVision _enemyVision;
-
-    public Action OnAttackStarted;
-    public Action OnAttackEnded;
 
     [Inject]
     private void Construct(IMovable movable, IAttacker attacker)

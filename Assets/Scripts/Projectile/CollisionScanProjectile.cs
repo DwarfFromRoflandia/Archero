@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CollisionScanProjectile : Projectile
 {
-    protected override void OnTargetCollision(Collision collision, Player player)
+    protected override void OnTargetCollision(Collision collision, IDamageable damageable)
     {
-        //player.ApplyDamage(Damage);
-        Debug.Log($"player have type {player.GetType()}");
+        //damageable.ApplyDamage(Damage);
+        Debug.Log($"player have type {damageable.GetType()}");
     }
 }

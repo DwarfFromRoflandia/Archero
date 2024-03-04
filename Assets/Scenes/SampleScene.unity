@@ -541,6 +541,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2619882815291771459, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
+      propertyPath: _rateOfFire
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2619882815291771459, guid: 2bbaa2e5851a76f458adc84fbfe9992a, type: 3}
       propertyPath: _projectilePrefab
       value: 
       objectReference: {fileID: -8685296648166983990, guid: a0fe2308a4e38b248a7ff01b9277c5ac, type: 3}

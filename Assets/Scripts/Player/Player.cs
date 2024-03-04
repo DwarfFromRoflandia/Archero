@@ -5,7 +5,7 @@ using UnityEngine;
 using Zenject;
 
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
     private int _damage;
 
@@ -29,13 +29,13 @@ public class Player : MonoBehaviour
     //    enemy.TakeDamage(_damage);
     //}
 
-    public void TakeDamage(float damage)
-    {
-
-    }
-
     private void Move()
     {
         _controller.Controller();
+    }
+
+    public void ApplyDamage(float damage)
+    {
+        
     }
 }

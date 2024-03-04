@@ -21,9 +21,9 @@ public abstract class Projectile : MonoBehaviour
     {
         if (_isProjectileDisposed) return; //если снаряд был уничтожен - выходим из метода
 
-        if (collision.gameObject.TryGetComponent(out Player player))
+        if (collision.gameObject.TryGetComponent(out IDamageable damageable))
         {
-            OnTargetCollision(collision, player);
+            OnTargetCollision(collision, damageable);
 
             if (ProjectileDisposeType.OnTargetCollision == _disposeType)
             {
@@ -46,7 +46,7 @@ public abstract class Projectile : MonoBehaviour
         _isProjectileDisposed = true;
     }
 
-    protected virtual void OnTargetCollision(Collision collision, Player player) { }
+    protected virtual void OnTargetCollision(Collision collision, IDamageable damageable) { }
     protected virtual void OnOtherCollision(Collision collision) { }
     protected virtual void OnAnyCollision(Collision collision) { }
 }
