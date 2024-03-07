@@ -13,10 +13,15 @@ public class Player : MonoBehaviour, IDamageable
 
     private IController _controller;
 
+    private PlayerVision _playerVision;
+
     public void Initialize(IController controller)
     {
         _controller = controller;
         Debug.Log(_controller.GetType());
+
+        _playerVision = GetComponent<PlayerVision>();
+        StartCoroutine(_playerVision.Coroutine());
     }
 
     private void FixedUpdate()

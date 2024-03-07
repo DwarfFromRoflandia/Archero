@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1197623318}
   - component: {fileID: 2619882815291771459}
   - component: {fileID: 676971365201566952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GroundEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +115,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0
   _healthPoint: 0
-  _attackSpeed: 0
 --- !u!114 &1197623318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d70c155fe0bae84ba5b8711bf19c0ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _projectileSpawnPoint: {fileID: 0}
+  _projectilePrefab: {fileID: 0}
+  _forceMode: 0
+  _force: 0
+  _rateOfFire: 0
 --- !u!195 &676971365201566952
 NavMeshAgent:
   m_ObjectHideFlags: 0

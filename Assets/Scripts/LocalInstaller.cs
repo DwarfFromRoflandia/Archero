@@ -11,7 +11,7 @@ public class LocalInstaller : MonoInstaller
     [SerializeField] private PlayerMovement _playerMovement;
     [SerializeField] private EntryPoint _entryPoint;
     [SerializeField] private EnemyVision _enemtVision;
-    [SerializeField] private ShootingEnemy _shootingEnemy;
+    [SerializeField] private ShootingAttack _shootingEnemy;
 
 
     /*It sounds like you need to sort out the 'Unable to resolve type' errors. 
@@ -60,7 +60,7 @@ public class LocalInstaller : MonoInstaller
     {
         Container
             .Bind<IAttacker>()
-            .To<ShootingEnemy>()
+            .To<ShootingAttack>()
             .FromInstance(_shootingEnemy)
             .AsSingle();
     }
@@ -69,7 +69,7 @@ public class LocalInstaller : MonoInstaller
     {
         Container
             .Bind<IAttacker>()
-            .To<DetonatingEnemy>()
+            .To<DetonatingAttack>()
             .AsSingle();
     }
 
